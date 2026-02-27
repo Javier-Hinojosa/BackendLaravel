@@ -92,9 +92,31 @@ php artisan make:factory <Factory_name>
 ## Middleware
 los Middleware son para agregar headers en los apis
 <pre>
-    php artisan make middleware CheckValueInHader
+php artisan make:middleware <Middleware_Name>
 </pre>
 
+## Events & Listeners
+Events: Puede realizar una acción en segundo plano.
+Listener: Escucha al evento cuando este es ejecuta.
+<pre>
+php artisan make:event <Event_Name>
+php artisan make:listener <Listener_Name> --event=<Event_Name>
+</pre>
+### ShouldQueue
+Ejecuta las tareas siempre y cuando se este ejecutando la siguiente linea:
+Nota: Guarda todos los jobs en base y hasta que se ejecute el comando realiza la tarea ordenada. 
+<pre>
+php artisan queue:work
+</pre>
+
+    #lista de eventos
+    php artisan event:list 
+
+## Provider
+Clase Base para proveer servicios a la aplicación
+<pre>
+php artisan make:provider <Provider_Name>
+</pre>
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:

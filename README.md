@@ -1,5 +1,9 @@
 
-## Proyecto de pruebas
+## [Curso de Programación Backend en PHP Laravel con Héctor de León](https://www.udemy.com/course/curso-de-programacion-backend-en-php-laravel/)
+    
+    
+#### Para revisar la lista de comandos, usar:
+    php artisan list
 
 ### Generar un controlador
 
@@ -117,6 +121,29 @@ Clase Base para proveer servicios a la aplicación
 <pre>
 php artisan make:provider <Provider_Name>
 </pre>
+
+## Commands
+Para crear una clase con comandos personalisados que puedes usar en consola.
+
+    php artisan make:command <Name_Command> 
+
+## [Pest](https://pestphp.com/)
+Pest es un framework para testear tu aplicación.
+
+Utiliza el siguiente comando para ejecutar tus pruebas.
+
+    php artisan test
+
+### Pruebas Unitarias
+Pruebas para funcionamiento de funciones no complejas.
+
+    php artisan make:test <Test_Name> --unit
+
+### Pruebas de caracteristica (Feature)    
+Pruebas para clases con u funcionamientos complejos o mas estructurados
+    php artisan make:test <Test_Name>
+ 
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:

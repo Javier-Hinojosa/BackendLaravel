@@ -2,6 +2,7 @@
 
 namespace App\Business\Services;
 
+use Exception;
 use Illuminate\Support\Facades\Crypt;
 
 class EncryptorService
@@ -24,7 +25,7 @@ class EncryptorService
         [$key, $encrypted] = explode(":", $decoded, 2);
         
         if ($key !== $this->key) {
-            throw new \InvalidArgumentException("Invalid encrypted data");
+            throw new Exception("Invalid encrypted data");
         }
         
         return Crypt::decryptString($encrypted);

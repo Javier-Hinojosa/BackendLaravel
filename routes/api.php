@@ -62,8 +62,8 @@ Route:: get("/query-test/method/join", [
          CheckValueInHeader::class.':12345,someValue'
          ]);
 
-Route::apiResource('/product', ProductController::class)
-->middleware(["jwt.auth", LogRequests::class]);   
+Route::apiResource('/product', ProductController::class);
+//->middleware(["jwt.auth", LogRequests::class]);   
 
 Route::post("/register", [AuthController::class, 'register']);
 Route::post("/login", [AuthController::class, 'login'])->name('login');

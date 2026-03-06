@@ -11,9 +11,9 @@ class Sale extends Model
     use SoftDeletes;
 
     protected $fillable = [
-        'total',
-        'sale_date',
         'email',
+        'sale_date',
+        'total',
     ];
 
     protected $hidden = [

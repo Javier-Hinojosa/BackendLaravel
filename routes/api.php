@@ -84,5 +84,5 @@ Route::get("/info/encrypt-user-email2/{id}", [InfoController::class, 'encryptUse
 
 Route::get("/api", [ApiController::class, 'getData']);
 
-Route::get("/api/sale", [SaleController::class, 'getSale']);
-Route::post("/api/sale", [SaleController::class, 'create']);
+Route::get("/sale", [SaleController::class, 'getSale']);
+Route::post("/sale", [SaleController::class, 'create']);

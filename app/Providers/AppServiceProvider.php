@@ -2,12 +2,15 @@
 
 namespace App\Providers;
 
+use App\Business\Interfaces\CreateSaleInterface;
 use App\Business\Interfaces\MessageServiceInterface;
+use App\Business\Services\CreateSaleService;
 use App\Business\Services\EncryptorService;
 use App\Business\Services\HiServices;
 use App\Business\Services\SingletonService;
 use App\Business\Services\UserService;
 use App\Http\Controllers\InfoController;
+use App\Http\Controllers\SaleController;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -51,7 +54,7 @@ class AppServiceProvider extends ServiceProvider
             SingletonService::class,
             function ($app) {
                 return new SingletonService();
-        });    
+        });
 
     }
 

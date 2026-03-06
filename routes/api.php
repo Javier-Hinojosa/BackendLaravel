@@ -5,6 +5,7 @@ use App\Http\Controllers\BackendController;
 use App\Http\Controllers\InfoController;
 use App\Http\Controllers\QueryController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\SaleController;
 use App\Http\Middleware\CheckValueInHeader;
 use App\Http\Middleware\UppercaseName;
 use App\Http\Middleware\LogRequests;
@@ -62,8 +63,8 @@ Route:: get("/query-test/method/join", [
          CheckValueInHeader::class.':12345,someValue'
          ]);
 
-Route::apiResource('/product', ProductController::class);
-//->middleware(["jwt.auth", LogRequests::class]);   
+Route::apiResource('/product', ProductController::class)
+->middleware(["jwt.auth", LogRequests::class]);   
 
 Route::post("/register", [AuthController::class, 'register']);
 Route::post("/login", [AuthController::class, 'login'])->name('login');
@@ -82,3 +83,6 @@ Route::get("/info/singleton", [InfoController::class, 'singletonValue']);
 Route::get("/info/encrypt-user-email2/{id}", [InfoController::class, 'encryptUserEmail2']);
 
 Route::get("/api", [ApiController::class, 'getData']);
+
+Route::get("/api/sale", [SaleController::class, 'getSale']);
+Route::post("/api/sale", [SaleController::class, 'create']);

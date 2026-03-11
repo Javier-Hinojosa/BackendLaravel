@@ -19,9 +19,6 @@ php artisan make:model <NameModel>
 
 ### Actions Handled by Resource Controllers
 
-![alt text]({25AECE98-61A8-41BA-8A72-55233D702823}.png)
-
-
 | Verb        | URI                    | Action  | Route Name      |
 |------------|------------------------|---------|-----------------|
 | GET        | /photos                | index   | photos.index    |
